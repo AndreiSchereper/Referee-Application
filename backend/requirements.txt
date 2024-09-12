@@ -1,0 +1,8 @@
+torch==1.13.1
+torchvision==0.14.1
+Werkzeug==2.2.2
+numpy==1.23.4
+opencv-python==4.6.0.66
+flask==2.1.1
+flask-cors==4.0.1
+ultralytics

@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  python-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    working_dir: /app
+    command: ["python", "run.py"]
+
+  # flutter-frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - app-network
+
+networks:
+  app-network:
+    driver: bridge
